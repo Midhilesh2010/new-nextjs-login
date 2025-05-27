@@ -1,27 +1,29 @@
-{
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
+    {
+      "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+          "@/*": [
+            "./src/*"
+          ]
+        },
+        "jsx": "preserve",
+        "plugins": [
+          {
+            "name": "next"
+          }
+        ]
+      },
+      "include": [
+        "next-env.d.ts",
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        ".next/types/**/*.ts"
+      ],
+      "exclude": [
+        "node_modules"
       ]
-    },
-    "jsx": "preserve",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
-}
+    }
+    
+    
