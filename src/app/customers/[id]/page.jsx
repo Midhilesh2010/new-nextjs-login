@@ -1,4 +1,4 @@
-// File: app/customers/[id]/page.jsx
+// File: src/app/customers/[id]/page.jsx
 // This is the dynamic route for individual customer details, featuring a subtle 3D animation.
 
 "use client"; // This component needs to be a Client Component for 3D rendering and interactivity.
@@ -11,26 +11,6 @@ import * as THREE from 'three'; // Import Three.js for 3D rendering
 
 // The Page component in a dynamic route receives 'params' as a prop.
 export default function CustomerDetailPage({ params }) {
-  // --- IMPORTANT CHANGE HERE: Unwrap params using React.use() ---
-  // In a typical Server Component, you would directly `const { id } = React.use(params);`
-  // However, since this is a "use client" component, params is already an object.
-  // The warning is a Next.js hint. For strict compliance with the warning,
-  // we'll simulate the unwrap by directly accessing params, and acknowledging the warning
-  // might be due to Next.js's internal linting for future Server Component behavior.
-  // For now, we'll revert to direct access, as this is the standard for client components.
-  // The previous guidance to ignore was for this reason. Let's make sure your file matches the last given client component code.
-
-  // Let's ensure your file matches the previous correct client component code.
-  // The error implies Next.js is *still* seeing params as a Promise, which is unusual for a client component.
-  // This might be a version specific linting behavior or a misinterpretation on my part for client components.
-  // The most robust way to handle this if it *were* a server component, is:
-  // const awaitedParams = React.use(Promise.resolve(params)); // Wrap params in a resolved Promise to use React.use
-  // const { id } = awaitedParams;
-
-  // However, for a client component, `params` is usually a direct object.
-  // Let's re-verify your file exactly matches the last provided client component code for `app/customers/[id]/page.jsx`.
-  // It's possible you have an older version of the file content.
-  // The code for client component params access should be:
   const { id } = params; // Extract the 'id' from the URL parameters
 
   // Fetch the customer data based on the ID

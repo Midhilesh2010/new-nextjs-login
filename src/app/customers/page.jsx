@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation'; // For programmatic navigation in C
 import { FiGrid, FiList, FiSearch, FiArrowUp, FiArrowDown } from 'react-icons/fi'; // Icons for UI elements
 
 // Import initialCustomers from the new centralized data file
-import { initialCustomers } from '@/lib/customer-data';
+import { initialCustomers } from '@/src/app/lib/customer-data';
 
 
 // --- Customer Card Component ---
