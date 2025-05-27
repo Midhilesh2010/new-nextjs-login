@@ -1,5 +1,6 @@
 "use client"; // Marks this as a Client Component for interactivity
 
+import Link from 'next/link';
 import React, { useState, useRef, useEffect } from "react";
 // Import icons from react-icons/fi (Feather Icons)
 import { FiMail, FiLock, FiEye, FiEyeOff } from "react-icons/fi";
@@ -238,16 +239,14 @@ function LoginPage() {
             )}
           </button>
 
-          {/* "Don't have an account? Sign up" link */}
-          <p className="text-center text-sm text-gray-600 mt-4">
-            Don't have an account?{" "}
-            <a
-              href="/account/signup"
-              className="text-[#357AFF] hover:text-[#2E69DE] font-medium transition-colors duration-200"
-            >
-              Sign up
-            </a>
-          </p>
+         {/* "Don't have an account? Sign up" link */}
+    <p className="text-center text-sm text-gray-600 mt-4">
+        Don&apos;t have an account?{' '}
+        <Link href="/signup" className="text-[hsl(240,75%,60%)] hover:text-[hsl(240,75%,50%)] font-medium transition-colors duration-200">
+            Sign Up!
+        </Link>
+    </p>
+          
         </div>
       </form>
     </div>
